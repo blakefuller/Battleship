@@ -6,8 +6,10 @@ import time
 #                NETWORK SETUP                  #
 #################################################
 
+#get user's IP address
+serverName = input('Enter server IP address: ')
+
 #TCP server connection
-serverName = 'localhost'
 serverPort = 43500
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))

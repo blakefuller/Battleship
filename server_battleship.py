@@ -15,7 +15,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 serverSocket.bind(('', serverPort))
 serverSocket.listen(1)
-print('The server will receive at', serverSocket.getsockname())
+print('The server is accepting players')
 
 #function to send a ready message to both clients
 def sendReady(clients):
