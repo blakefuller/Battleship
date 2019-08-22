@@ -51,7 +51,6 @@ The result of each shot will be printed on each players' screen. When a ship is 
 
 #### Notes
 * If you pick the same target space to shoot twice, you'll be notified that you already attempted attacking that space, but you won't be able to fire again until your next turn.
-* At the moment, entering anything other than numbers into the X or Y coordinate will crash your game and you'll both have to start everything over. Be careful!
 * Also at the moment, the network connection will probably only work on two computers when both are connected to the same network, due to firewalls and/or router settings most likely getting in the way.
 
 Thanks for playing, and enjoy!

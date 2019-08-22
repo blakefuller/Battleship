@@ -1,5 +1,6 @@
 from socket import *
 import numpy as np
+import pygame
 import time
 
 #################################################
@@ -113,19 +114,27 @@ v = 1
 i = 1
 while(i < 6):
     while 1:
-        x = int(input('X coordinate for ' + tagList[i] + ': '))
-        if(x >= 0 and x <= 9):
-            x = int(x)
-            break
+        try:
+            x = int(input('X coordinate for ' + tagList[i] + ': '))
+            if(x >= 0 and x <= 9):
+                x = int(x)
+                break
+        except:
+            print('Invalid input')
     while 1:
-        y = int(input('Y coordinate for ' + tagList[i] + ': '))
-        if(y >= 0 and y <= 9):
-            break
+        try:
+            y = int(input('Y coordinate for ' + tagList[i] + ': '))
+            if(y >= 0 and y <= 9):
+                break
+        except:
+            print('Invalid input')
     while 1:
         dir = input('\'up\' or \'right\' orientation for ' + tagList[i] + ': ')
         dir = dir.lower()
         if(dir == 'up' or dir == 'right'):
             break
+        else:
+            print('Invalid input')
 
     #call ship setup function
     v = ship_setup(i, x, y, dir)
@@ -204,15 +213,21 @@ print(np.rot90(enemyBoard))
 
 #if Player 1, make the first move
 if(playerNum == '1'):
-        #get user input
+    #get user input
     while 1:
-        x = int(input('Enter target X coordinate: '))
-        if(x >= 0 and x <= 9):
-            break
+        try:
+            x = int(input('Enter target X coordinate: '))
+            if(x >= 0 and x <= 9):
+                break
+        except:
+            print('Invalid input')
     while 1:
-        y = int(input('Enter target Y coordinate: '))
-        if(y >= 0 and y <= 9):
-            break
+        try:
+            y = int(input('Enter target Y coordinate: '))
+            if(y >= 0 and y <= 9):
+                break
+        except:
+            print('Invalid input')
 
     Fire(x, y)
     time.sleep(0.5)
@@ -267,13 +282,19 @@ while 1:
 #--------------SEND FIRE----------------
     #get user input
     while 1:
-        x = int(input('Enter target X coordinate: '))
-        if(x >= 0 and x <= 9):
-            break
+        try:
+            x = int(input('Enter target X coordinate: '))
+            if(x >= 0 and x <= 9):
+                break
+        except:
+            print('Invalid input')
     while 1:
-        y = int(input('Enter target Y coordinate: '))
-        if(y >= 0 and y <= 9):
-            break
+        try:
+            y = int(input('Enter target Y coordinate: '))
+            if(y >= 0 and y <= 9):
+                break
+        except:
+            print('Invalid input')
 
     Fire(x, y)
     time.sleep(0.5)
